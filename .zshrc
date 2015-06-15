@@ -64,4 +64,3 @@ logfmt='%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset
 alias glg="git log --graph --pretty=format:'$logfmt' --abbrev-commit --date=relative"
 alias gph="pushd . >& /dev/null; favs; cd ..; git subtree push --prefix web heroku master; popd >& /dev/null;"
 
-
