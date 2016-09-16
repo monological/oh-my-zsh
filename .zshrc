@@ -52,6 +52,8 @@ alias sf=". /Users/snow/bin/sf.sh"
 alias favs=". /Users/snow/bin/favs.sh"
 alias diw=". /Users/snow/bin/diw.sh"
 alias dic=". /Users/snow/bin/dic.sh"
+alias xl=". /Users/snow/bin/xl.sh"
+alias bmw=". /Users/snow/bin/bmw.sh"
 
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -59,8 +61,60 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin"
 
 logfmt='%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset'
 alias glg="git log --graph --pretty=format:'$logfmt' --abbrev-commit --date=relative"
-alias gph="pushd . >& /dev/null; favs; cd ..; git subtree push --prefix web heroku master; popd >& /dev/null;"
+gph(){ 
+    pushd . >& /dev/null; 
+    if [[ "$1" == "favs" ]]; then 
+        favs; 
+    elif [[ "$1" == "sf" ]]; then
+        sf;
+    else
+        echo "Invalid project given $1"
+        return
+    fi
+
+    cd ..;
+    git subtree push --prefix web heroku master; 
+    popd >& /dev/null; 
+}
+
+export PATH="/usr/local/sbin:$(brew --prefix homebrew/php/php56)/bin:$PATH"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
