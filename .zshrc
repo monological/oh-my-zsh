@@ -48,12 +48,7 @@ source $ZSH/oh-my-zsh.sh
 #export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/usr/local/sbin
 
-alias sf=". /Users/snow/bin/sf.sh"
-alias favs=". /Users/snow/bin/favs.sh"
-alias diw=". /Users/snow/bin/diw.sh"
-alias dic=". /Users/snow/bin/dic.sh"
-alias xl=". /Users/snow/bin/xl.sh"
-alias bmw=". /Users/snow/bin/bmw.sh"
+source "$ZSH/.alias"
 
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -83,7 +78,7 @@ gph(){
 
 export PATH="/usr/local/sbin:$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
-
+export PATH="/Developer/NVIDIA/CUDA-8.0/bin:$PATH"
 
 
 
