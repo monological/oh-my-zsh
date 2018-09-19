@@ -41,7 +41,7 @@ ZSH_THEME="monological"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git ruby golang django scala gem history history-substring-search terminalapp brew nanoc python heroku colored-man)
-plugins=(git ruby golang history history-substring-search terminalapp brew nanoc python colored-man)
+plugins=(git ruby golang history history-substring-search terminalapp brew nanoc python colored-man filetypes)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -51,12 +51,10 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local
 
 source "$ZSH/.alias"
 
-source /usr/local/bin/virtualenvwrapper.sh
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export GOPATH=$HOME/go
+export GOPATH=/usr/local/go
 export PATH="$PATH:$GOPATH/bin"
 
 logfmt='%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset'
@@ -77,7 +75,7 @@ gph(){
     popd >& /dev/null; 
 }
 
-export PATH="/usr/local/sbin:$(brew --prefix homebrew/php/php56)/bin:$PATH"
+export PATH="/usr/local/sbin:$(brew --prefix php)/bin:$PATH"
 
 export PATH="/Developer/NVIDIA/CUDA-8.0/bin:$PATH"
 
@@ -93,5 +91,9 @@ cd ~/universe/blacksun
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
+export LUA_PATH='?;?.lua;./libs/?.lua;./libs/?.lc'
 
+export PATH=~/code/flutter/bin:$PATH
+
+alias tclsh='rlwrap tclsh'
 
