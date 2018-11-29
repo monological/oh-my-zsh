@@ -51,10 +51,12 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local
 
 source "$ZSH/.alias"
 
+source /usr/local/bin/virtualenvwrapper.sh
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export GOPATH=/usr/local/go
+export GOPATH=$HOME/go
 export PATH="$PATH:$GOPATH/bin"
 
 logfmt='%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset'
@@ -75,7 +77,7 @@ gph(){
     popd >& /dev/null; 
 }
 
-export PATH="/usr/local/sbin:$(brew --prefix php)/bin:$PATH"
+export PATH="/usr/local/sbin:$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 export PATH="/Developer/NVIDIA/CUDA-8.0/bin:$PATH"
 
