@@ -77,7 +77,7 @@ gph(){
     popd >& /dev/null; 
 }
 
-export PATH="/usr/local/sbin:$(brew --prefix homebrew/php/php56)/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 export PATH="/Developer/NVIDIA/CUDA-8.0/bin:$PATH"
 
