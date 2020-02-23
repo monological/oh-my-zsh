@@ -89,13 +89,6 @@ alias c='clear'
 # 10ms for key sequences
 KEYTIMEOUT=1
 
-cd ~/universe/blacksun
+source "$ZSH/.zshrc_personal"
 
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-
-export LUA_PATH='?;?.lua;./libs/?.lua;./libs/?.lc'
-
-export PATH=~/code/flutter/bin:$PATH
-
-alias tclsh='rlwrap tclsh'
 

@@ -1,9 +1,10 @@
 # custom files
 custom/
-!custom/plugins/example
-!custom/example.zsh
 
 # temp files directories
 cache/
 log/
 .alias
+*.swp
+.DS_Store
+.zshrc_personal
